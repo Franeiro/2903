@@ -4,9 +4,12 @@
 	<title>Sofi TKM</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 
+	<!--
+
 	<script type="text/javascript">
 		
-		window.onload=function() {
+		window.onload=function carga() {
+
 		  var E = document.getElementsByClassName("item");
 		  var m = E.length;
 		  var n = parseInt(Math.random()*m);
@@ -15,8 +18,10 @@
 		      e.style.display='none';
 		  }
 		  E[n].style.display='';
-		}
 
+
+
+		}
 
 
 
@@ -28,7 +33,7 @@
 
 <body>
 
-	<!-- 
+	
 	<div class="wrapper">
     <div class="static-txt">Por momentos como este</div>
     <ul class="dynamic-txts">
@@ -39,9 +44,9 @@
     </ul>
     
   </div>
--->
 
-<!--
+
+
   
   <div class="container" id="uno">
     	
@@ -51,7 +56,7 @@
   		
   </div>
 
--->
+
 
 
 	
@@ -134,7 +139,38 @@
 
 </body>
 
-<script>
-	  
+<script src="jquery-3.5.1.min.js">
+	
 </script>
+
+<script type="text/javascript">
+	$(function() {
+setTimeout(function() { $("item").fadeIn(2500); }, 5000)
+
+})
+</script>
+-->
+
+
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <title> Random Image </title>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="index.css"/>
+    <script src="index.js"></script>
+  </head>
+  <body>
+    <div id="container">
+      <div id="inner_container">
+        <img id="image_shower"/>
+      </div>
+      <div id="button_container">
+        <button onclick="get_random_image()"> Click<i></i> </button>
+      </div>
+    </div>
+  </body>
+</html>
+
 </html>
