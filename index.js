@@ -78,8 +78,9 @@ function get_random_image(){
 
   if (random_index <=21) {
 
-    document.getElementById("inner_container").style.height="400px";
-    document.getElementById("inner_container").style.width="600px";
+    document.getElementById("inner_container").style.height="750px";
+    document.getElementById("inner_container").style.width="100%";
+
 
      selected_image = image_array[random_index];
 
@@ -90,8 +91,8 @@ function get_random_image(){
 
   else 
   {
-    document.getElementById("inner_container").style.height="600px";
-    document.getElementById("inner_container").style.width="400px";
+    document.getElementById("inner_container").style.height="1000px";
+    document.getElementById("inner_container").style.width="750px";
 
      selected_image = image_array[random_index];
   document.getElementById('image_shower').src = `./fotos/${selected_image}`
@@ -99,3 +100,4 @@ function get_random_image(){
   
  
 }
+

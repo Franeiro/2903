@@ -99,16 +99,21 @@ body{
 body{
   background-color: #f29175;
 
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
+  grid-template-columns: 1fr;
+  grid-auto-columns: 1fr 1fr;
+  grid-template-areas: "uno" "dos";
+
 }
 
 #container{
-  width: 60%;
+  width: 100%;
   height: 600px;
-
+  display: grid;
   border-radius: 5px;
+  grid-area: uno;
 
 }
 
@@ -162,4 +167,72 @@ button:active{
   transform: translateY(20px);
   transform: rotateZ(10deg);
 
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 70%;
+  font-size: 60px;
+  color: white;
+  font-family: 'Antic Slab', serif;
+}
+
+.wrapper2 
+{
+	display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3%;
+  font-family: 'Antic Slab', serif;
+}
+.wrapper2 .static-txt{
+  color: #fff;
+  font-size: 60px;
+  font-weight: 400;
+  width: 100%;
+}
+.wrapper2 .dynamic-txts{
+  margin-top: : 15px;
+  height: 90px;
+  line-height: 90px;
+  overflow: hidden;
+}
+.dynamic-txts li{
+  list-style: none;
+  color: white;
+  font-size: 60px;
+  font-weight: 500;
+  position: relative;
+  top: 0;
+  animation: slide 12s steps(4) infinite;
+}
+@keyframes slide {
+  100%{
+    top: -360px;
+  }
+}
+.dynamic-txts li span{
+  position: relative;
+  margin: 5px 0;
+  line-height: 90px;
+}
+.dynamic-txts li span::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #f29175;
+  border-left: 2px solid white;
+  animation: typing 3s steps(10) infinite;
+}
+@keyframes typing {
+  40%, 60%{
+    left: calc(100% + 30px);
+  }
+  100%{
+    left: 0;
+  }
 }
